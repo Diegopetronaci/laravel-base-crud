@@ -17,6 +17,9 @@ Route::get('/', 'homecontroller@indexHome')->name('home');
 Route::get('/about', 'homecontroller@indexAbout')->name('about');
 Route::get('/blog', 'homecontroller@indexBlog')->name('blog');
 
+
+Route::resource('posts', 'homeController');
+
 /* 
 Route::get('home', function () {
     return view('home');

@@ -13,15 +13,17 @@ class homeController extends Controller
 
     public function indexHome()
     {
-        return view('home');
+        $title = "Blog";
+        return view('home', compact('title'));
     }
     public function indexAbout()
     {
         return view('about');
     }
-    public function indexBlog()
+    public function indexBlog() /* posts(Post $post) */
     {
         $posts = Post::all() ;
+        /* $posts = $post->all(); */
         return view('blog' , compact('posts'));
     }
 }
