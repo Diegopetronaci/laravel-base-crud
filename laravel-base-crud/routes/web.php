@@ -15,10 +15,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'homecontroller@indexHome')->name('home');
 Route::get('/about', 'homecontroller@indexAbout')->name('about');
-Route::get('/blog', 'homecontroller@indexBlog')->name('blog');
+//Route::get('/blog', 'homecontroller@indexBlog')->name('blog');
 
 
-Route::resource('posts', 'homeController');
+Route::resource('posts', 'PostController');
 
 /* 
 Route::get('home', function () {
